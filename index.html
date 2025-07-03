@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Internship Project</title>
+</head>
+<body>
+    <h2>Internship Project Output:</h2>
+
+    <script>
+        // 1. Print name and address
+        document.write("<b>Task 1:</b><br>");
+        let name = "Piyush Kumar";
+        let address = "Gaya, Bihar, India";
+        document.write("Name: " + name + "<br>");
+        document.write("Address: " + address + "<br><br>");
+
+        // 2. Check if value and type of two variables are same
+        document.write("<b>Task 2:</b><br>");
+        let a = 10;
+        let b = '10';
+        if (a === b) {
+            document.write("Both value and type are same.<br><br>");
+        } else {
+            document.write("Either value or type is different.<br><br>");
+        }
+
+        // 3. Add two strings and return all capital
+        document.write("<b>Task 3:</b><br>");
+        function addStringsUpperCase(str1, str2) {
+            return (str1 + str2).toUpperCase();
+        }
+        let result = addStringsUpperCase("piyush", "kumar");
+        document.write("Result: " + result + "<br><br>");
+
+        // 4. Convert string length to bytes
+        document.write("<b>Task 4:</b><br>");
+        function stringToBytes(str) {
+            return new TextEncoder().encode(str).length;
+        }
+        let text = "education is important";
+        document.write("Text: " + text + "<br>");
+        document.write("Byte length: " + stringToBytes(text) + "<br><br>");
+
+        // 5. Round number to specified digits
+        document.write("<b>Task 5:</b><br>");
+        function roundToDigits(num, digits) {
+            return parseFloat(num.toFixed(digits));
+        }
+        let rounded = roundToDigits(3.14159265, 2);
+        document.write("Rounded value (2 digits): " + rounded + "<br>");
+    </script>
+</body>
+</html>
